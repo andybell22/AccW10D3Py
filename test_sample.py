@@ -1,6 +1,6 @@
 import pytest
 
-from sample import add, minus, divide
+from sample import add, minus, divide, multiply
 
 def test_add():
     assert add(1, 2) == 3
@@ -16,3 +16,6 @@ def test_divide():
     assert divide(5, 2) == 2.5
     with pytest.raises(ValueError, match='Cannot divide by zero!'):
         divide(4, 0)
+
+def test_multiply():
+    assert multiply(3, 6) == 18
